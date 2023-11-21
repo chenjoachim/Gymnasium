@@ -10,6 +10,7 @@ from gymnasium.envs.mujoco.humanoidstandup import HumanoidStandupEnv
 from gymnasium.envs.mujoco.inverted_double_pendulum import InvertedDoublePendulumEnv
 from gymnasium.envs.mujoco.inverted_pendulum import InvertedPendulumEnv
 from gymnasium.envs.mujoco.pusher import PusherEnv
+from gymnasium.envs.mujoco.fencer import FencerEnv
 from gymnasium.envs.mujoco.reacher import ReacherEnv
 from gymnasium.envs.mujoco.swimmer import SwimmerEnv
 from gymnasium.envs.mujoco.walker2d import Walker2dEnv

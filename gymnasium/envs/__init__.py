@@ -224,6 +224,13 @@ register(
     reward_threshold=0.0,
 )
 
+register(
+    id="Fencer",
+    entry_point="gymnasium.envs.mujoco.fencer:FencerEnv",
+    max_episode_steps=100,
+    reward_threshold=0.0,
+)
+
 # balance
 
 register(
