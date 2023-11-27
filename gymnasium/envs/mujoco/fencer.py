@@ -215,10 +215,15 @@ class FencerEnv(MujocoEnv, utils.EzPickle):
             "render_fps": int(np.round(1.0 / self.dt)),
         }
 
+    
+    def get_geom_com(self, geom_name):
+        return self.data.geom(geom_name).xpos
+    
+    
     def step(self, action):
         vec_1 = self.get_body_com("object") - self.get_body_com("tips_arm")
         vec_2 = self.get_body_com("object") - self.get_body_com("goal")
-
+        # print(self.get_geom_com("sword_blade"))
         reward_near = -np.linalg.norm(vec_1) * self._reward_near_weight
         reward_dist = -np.linalg.norm(vec_2) * self._reward_dist_weight
         reward_ctrl = -np.square(action).sum() * self._reward_control_weight
